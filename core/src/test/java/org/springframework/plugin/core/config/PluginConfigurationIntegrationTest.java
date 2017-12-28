@@ -24,8 +24,8 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.plugin.core.PluginRegistry;
-import org.springframework.plugin.core.SamplePlugin;
-import org.springframework.plugin.core.SamplePluginHost;
+import org.springframework.plugin.core.Component;
+import org.springframework.plugin.core.ComponentPluginHost;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -39,32 +39,32 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class PluginConfigurationIntegrationTest {
 
 	@Autowired
-	List<SamplePlugin> samplePlugins;
+	List<Component> components;
 
 	@Autowired
 	@Qualifier("bar")
-	PluginRegistry<SamplePlugin, String> pluginRegistry;
+	PluginRegistry<Component, String> pluginRegistry;
 
 	@Autowired
 	@Qualifier("host")
-	SamplePluginHost host;
+    ComponentPluginHost host;
 
 	@Autowired
 	@Qualifier("otherHost")
-	SamplePluginHost otherHost;
+    ComponentPluginHost otherHost;
 
 	@Autowired
-	SamplePlugin plugin;
+    Component plugin;
 
 	@Test
 	public void test() throws Exception {
 
-		assertNotNull(samplePlugins);
+		assertNotNull(components);
 
 		assertSame(pluginRegistry, host.getRegistry());
 		assertNotSame(pluginRegistry, otherHost.getRegistry());
 
-		assertTrue(samplePlugins.contains(plugin));
+		assertTrue(components.contains(plugin));
 		assertTrue(pluginRegistry.contains(plugin));
 	}
 }

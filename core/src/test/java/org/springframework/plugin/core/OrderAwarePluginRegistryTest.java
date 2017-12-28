@@ -19,7 +19,7 @@ import org.springframework.test.util.ReflectionTestUtils;
 /**
  * Unit test for {@link OrderAwarePluginRegistry} that especially concentrates on testing ordering functionality.
  */
-public class OrderAwarePluginRegistryTest extends SimplePluginRegistryTest {
+public class OrderAwarePluginRegistryTest extends ComponentPluginRegistryTest {
 	TestPlugin firstPlugin;
 	TestPlugin secondPlugin;
 
@@ -97,7 +97,7 @@ public class OrderAwarePluginRegistryTest extends SimplePluginRegistryTest {
 		/*
 		 * (non-Javadoc)
 		 * 
-		 * @see org.springframework.plugin.core.Plugin#supports(java.lang.Object)
+		 * @see org.springframework.component1.core.Plugin#supports(java.lang.Object)
 		 */
 		public boolean supports(String delimiter) {
 			return true;
@@ -109,7 +109,7 @@ public class OrderAwarePluginRegistryTest extends SimplePluginRegistryTest {
 		/*
 		 * (non-Javadoc)
 		 * 
-		 * @see org.springframework.plugin.core.Plugin#supports(java.lang.Object)
+		 * @see org.springframework.component1.core.Plugin#supports(java.lang.Object)
 		 */
 		public boolean supports(String delimiter) {
 			return true;
