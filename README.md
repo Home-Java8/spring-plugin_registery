@@ -1,5 +1,8 @@
 # The smallest plugin system ever
 
+* https://www.programcreek.com/java-api-examples/index.php?api=org.springframework.plugin.core.PluginRegistry
+* https://github.com/spring-projects/spring-plugin
+
 ## Preface
 
 ### Introduction
