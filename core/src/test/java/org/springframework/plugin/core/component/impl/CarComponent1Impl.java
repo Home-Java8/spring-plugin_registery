@@ -1,6 +1,7 @@
-package org.springframework.plugin.core.component;
+package org.springframework.plugin.core.component.impl;
 
 import org.springframework.plugin.core.Car;
+import org.springframework.plugin.core.component.Component;
 import utils.CarUtil;
 
 public class CarComponent1Impl implements Component {

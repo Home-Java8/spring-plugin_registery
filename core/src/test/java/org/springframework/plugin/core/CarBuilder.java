@@ -1,7 +1,7 @@
 package org.springframework.plugin.core;
 
-import org.springframework.plugin.core.component.CarComponent1Impl;
-import org.springframework.plugin.core.component.CarComponent2Impl;
+import org.springframework.plugin.core.component.impl.CarComponent1Impl;
+import org.springframework.plugin.core.component.impl.CarComponent2Impl;
 import org.springframework.plugin.core.component.Component;
 
 import java.util.Arrays;

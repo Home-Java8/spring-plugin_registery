@@ -1,6 +1,7 @@
-package org.springframework.plugin.core.component;
+package org.springframework.plugin.core.component.impl;
 
 import org.springframework.plugin.core.Car;
+import org.springframework.plugin.core.component.Component;
 import utils.CarUtil;
 
 public class CarComponent2Impl implements Component {
@@ -10,7 +11,7 @@ public class CarComponent2Impl implements Component {
 	}
 
 	public CarComponent2Impl(Car car) {
-                builder = new Car.Builder(car.getBrand(), car.getType())
+		builder = new Car.Builder(car.getBrand(), car.getType())
 				.power(car.getPower())
 				.torque(car.getTorque());
 	}
