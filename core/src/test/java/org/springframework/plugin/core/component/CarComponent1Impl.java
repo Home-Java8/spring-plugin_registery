@@ -1,12 +1,15 @@
-package org.springframework.plugin.core;
+package org.springframework.plugin.core.component;
 
-public class Component1Impl implements Component {
+import org.springframework.plugin.core.Car;
+import utils.CarUtil;
+
+public class CarComponent1Impl implements Component {
 	private Car.Builder builder;
 
-	private Component1Impl() {
+	private CarComponent1Impl() {
 	}
 
-	public Component1Impl(Car car) {
+	public CarComponent1Impl(Car car) {
 		builder = new Car.Builder(car.getBrand(), car.getType())
 				.power(car.getPower())
 				.torque(car.getTorque())
@@ -15,7 +18,7 @@ public class Component1Impl implements Component {
 	}
 
 	public boolean supports(String delimiter) {
-		return delimiter.equals(MyUtil.COMPONENT_1);
+		return delimiter.equals(CarUtil.COMPONENT_1);
 	}
 
 	public Car.Builder getBuilder() {

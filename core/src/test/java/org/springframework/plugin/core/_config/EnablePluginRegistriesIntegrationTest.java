@@ -24,17 +24,15 @@
 //import org.springframework.beans.factory.annotation.Qualifier;
 //import org.springframework.context.annotation.Bean;
 //import org.springframework.context.annotation.Configuration;
-//import org.springframework.plugin.core.Component1Impl;
+//import org.springframework.plugin.core.component.CarComponent1Impl;
 //import org.springframework.plugin.core.Plugin;
 //import org.springframework.plugin.core.PluginRegistry;
-//import org.springframework.plugin.core.Component;
+//import org.springframework.plugin.core.component.Component;
 //import org.springframework.test.context.ContextConfiguration;
 //import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 //
 ///**
-// * Integration tests for {@link EnablePluginRegistries}.
-// *
-// * @author Oliver Gierke
+// * Integration tests for {@link EnablePluginRegistries}
 // */
 //@RunWith(SpringJUnit4ClassRunner.class)
 //@ContextConfiguration
@@ -45,8 +43,8 @@
 //	static class Config {
 //
 //		@Bean
-//		public Component1Impl pluginImpl() {
-//			return new Component1Impl();
+//		public CarComponent1Impl pluginImpl() {
+//			return new CarComponent1Impl();
 //		}
 //	}
 //

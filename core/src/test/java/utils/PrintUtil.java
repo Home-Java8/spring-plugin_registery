@@ -1,4 +1,6 @@
-package org.springframework.plugin.core;
+package utils;
+
+import org.springframework.plugin.core.Car;
 
 public class PrintUtil {
     private static final String ANSI_RESET = "\u001B[0m";
@@ -26,13 +28,13 @@ public class PrintUtil {
             DATA_OUT_0 = "| " + ANSI_YELLOW + "%1$-20s" + ANSI_RESET + " | " + ANSI_YELLOW + "%2$-20s" + ANSI_RESET + " | " + ANSI_YELLOW + "%3$-20s" + ANSI_RESET + " | " + ANSI_YELLOW + "%4$-20s" + ANSI_RESET + " | " + ANSI_YELLOW + "%5$-20s" + ANSI_RESET + " | " + ANSI_YELLOW + "%6$-20s" + ANSI_RESET + " | " + ANSI_YELLOW + "%7$-20s" + ANSI_RESET + " |\n",
             DATA_OUT_1 = "| " + ANSI_GREEN + "%1$-20s" + ANSI_RESET + " | " + ANSI_GREEN + "%2$-20s" + ANSI_RESET + " | " + ANSI_GREEN + "%3$-20s" + ANSI_RESET + " | " + ANSI_GREEN + "%4$-20s" + ANSI_RESET + " | " + ANSI_GREEN + "%5$-20s" + ANSI_RESET + " | " + ANSI_GREEN + "%6$-20s" + ANSI_RESET + " | " + ANSI_GREEN + "%7$-20s" + ANSI_RESET + " |\n";
 
-    static void format(String[] args) {
+    public static void format(String[] args) {
         System.out.println(PrintUtil.SEPARATOR_OUT);
         System.out.format(PrintUtil.HEAD_OUT, args);
         System.out.println(PrintUtil.SEPARATOR_OUT);
     }
 
-    static void format(Car car) {
+    public static void format(Car car) {
         String[] out = new String[]{
                 car.getBrand(),
                 car.getType(),
