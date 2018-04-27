@@ -1,6 +1,6 @@
 package utils;
 
-import org.springframework.plugin.core.Car;
+import org.springframework.plugin.metadata.Car;
 
 public class PrintUtil {
     private static final String ANSI_RESET = "\u001B[0m";

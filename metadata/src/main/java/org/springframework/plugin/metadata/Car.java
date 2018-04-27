@@ -1,4 +1,4 @@
-package org.springframework.plugin.core;
+package org.springframework.plugin.metadata;
 
 /**
  * Это обычный автомобиль
